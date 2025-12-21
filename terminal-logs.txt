@@ -1,0 +1,29 @@
+juanro@Juju:~/dev/first-contract$ cast call 0x39DDf3a1B58b051E4cb553f14EAa6A4EA42d627A "balances(address)" "0x67523C7584f60743f10F3C2feA26d597436F7cac" --rpc-url $TENDERLY_RPC_URL | cast --to-dec
+100
+juanro@Juju:~/dev/first-contract$ cast send 0x39DDf3a1B58b051E4cb553f14EAa6A4EA42d627A "sendTokens(address,uint256)" 0x1234567890123456789012345678901234567890 55 --rpc-url $TENDERLY_RPC_URL --private-key $PRIVATE_KEY
+Error: Failed to estimate gas: server returned an error response: error code 3: execution reverted, data: "0x"
+juanro@Juju:~/dev/first-contract$ cast send 0x39DDf3a1B58b051E4cb553f14EAa6A4EA42d627A "sendTokens(address,uint256)" 0x1234567890123456789012345678901234567890 55 --rpc-url $TENDERLY_RPC_URL --private-key $PRIVATE_KEY
+Error: Failed to estimate gas: server returned an error response: error code 3: execution reverted, data: "0x"
+juanro@Juju:~/dev/first-contract$ cast send 0x39DDf3a1B58b051E4cb553f14EAa6A4EA42d627A "transferTokens(address,uint256)"
+ 0x1234567890123456789012345678901234567890 55 --rpc-url $TENDERLY_RPC_URL --private-key $PRIVATE_KEY
+
+blockHash            0x80d37775b60d924f731117ba3d6653a313377dc42490883a4da3aff47673dc7e
+blockNumber          24019551
+contractAddress
+cumulativeGasUsed    49886
+effectiveGasPrice    100001
+from                 0x67523C7584f60743f10F3C2feA26d597436F7cac
+gasUsed              49886
+logs                 []
+logsBloom            0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+root
+status               1 (success)
+transactionHash      0x06f1c57febded865055b307972ae7e8c7f81716f2768749aa4aea3a954d4fe7d
+transactionIndex     0
+type                 2
+blobGasPrice
+blobGasUsed          0
+to                   0x39DDf3a1B58b051E4cb553f14EAa6A4EA42d627A
+juanro@Juju:~/dev/first-contract$ cast call 0x39DDf3a1B58b051E4cb553f14EAa6A4EA42d627A "balances(address)" "0x67523C7584f60743f10F3C2feA26d597436F7cac" --rpc-url $TENDERLY_RPC_URL | cast --to-dec
+45
+juanro@Juju:~/dev/first-contract$
